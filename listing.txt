@@ -1,22 +1,26 @@
-#EvenFolder et OddFolder
-
-New-Item -ItemType Directory -Path /tmp/ -Name EvenFolder
-New-Item -ItemType Directory -Path /tmp/ -Name OddFolder
-
- # Déplacement des fichiers pairs dans EvenFolder
-
-Move-Item -Path /tmp/FolderTest1/File2 -Destination /tmp/EvenFolder
-Move-Item -Path /tmp/FolderTest1/File4 -Destination /tmp/EvenFolder
-Move-Item -Path /tmp/FolderTest2/File6 -Destination /tmp/EvenFolder
-Move-Item -Path /tmp/FolderTest2/File8 -Destination /tmp/EvenFolder
-Move-Item -Path /tmp/FolderTest2/File10 -Destination /tmp/EvenFolder
-
- # Déplacement des fichiers impairs dans OddFolder
-
-Move-Item -Path /tmp/FolderTest1/File1 -Destination /tmp/OddFolder
-Move-Item -Path /tmp/FolderTest1/File3 -Destination /tmp/OddFolder
-Move-Item -Path /tmp/FolderTest1/File5 -Destination /tmp/OddFolder
-Move-Item -Path /tmp/FolderTest2/File7 -Destination /tmp/OddFolder
-Move-Item -Path /tmp/FolderTest2/File9 -Destination /tmp/OddFolder
+  Répertoire : C:\OddFolder
 
 
+Mode                 LastWriteTime         Length Name                               
+----                 -------------         ------ ----                               
+-a----        03/10/2024     10:40              0 File1                              
+-a----        03/10/2024     10:40              0 File3                              
+-a----        03/10/2024     10:49              0 File7                              
+-a----        03/10/2024     10:50              0 File9                              
+
+
+
+PS C:\> Get-ChildItem -path C:\EvenFolder
+
+
+    Répertoire : C:\EvenFolder
+
+
+Mode                 LastWriteTime         Length Name                               
+----                 -------------         ------ ----                               
+-a----        03/10/2024     10:40              0 File1                              
+-a----        03/10/2024     10:50              0 File10                             
+-a----        03/10/2024     10:40              0 File2                              
+-a----        03/10/2024     10:40              0 File5                              
+-a----        03/10/2024     10:45              0 File6                              
+-a----        03/10/2024     10:50              0 File8                              
