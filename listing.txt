@@ -3,7 +3,7 @@
 New-Item -ItemType Directory -Path /tmp/ -Name EvenFolder
 New-Item -ItemType Directory -Path /tmp/ -Name OddFolder
 
-# Déplacement des fichiers pairs dans EvenFolder
+ # Déplacement des fichiers pairs dans EvenFolder
 
 Move-Item -Path /tmp/FolderTest1/File2 -Destination /tmp/EvenFolder
 Move-Item -Path /tmp/FolderTest1/File4 -Destination /tmp/EvenFolder
@@ -11,7 +11,7 @@ Move-Item -Path /tmp/FolderTest2/File6 -Destination /tmp/EvenFolder
 Move-Item -Path /tmp/FolderTest2/File8 -Destination /tmp/EvenFolder
 Move-Item -Path /tmp/FolderTest2/File10 -Destination /tmp/EvenFolder
 
-# Déplacement des fichiers impairs dans OddFolder
+ # Déplacement des fichiers impairs dans OddFolder
 
 Move-Item -Path /tmp/FolderTest1/File1 -Destination /tmp/OddFolder
 Move-Item -Path /tmp/FolderTest1/File3 -Destination /tmp/OddFolder
